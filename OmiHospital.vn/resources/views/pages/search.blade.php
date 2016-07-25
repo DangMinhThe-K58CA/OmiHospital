@@ -1,4 +1,7 @@
 @extends('templates.master')
+@section('css')
+    <link href="{{asset('css/search.css')}}" rel="stylesheet">
+@endsection
 @section('body')
     <section id="team" class="bg-light-gray">
         <div class="container">
