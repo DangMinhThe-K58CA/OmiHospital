@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2016 at 06:36 AM
+-- Generation Time: Jul 25, 2016 at 08:26 AM
 -- Server version: 5.6.26-log
 -- PHP Version: 5.6.15
 
@@ -11186,7 +11186,7 @@ ALTER TABLE `clinic_service`
 -- Constraints for table `district`
 --
 ALTER TABLE `district`
-  ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`id`) REFERENCES `type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `province`
