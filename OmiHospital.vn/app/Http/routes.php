@@ -14,5 +14,4 @@
 Route::get('/', function () {
     return view('pages.index');
 });
-Route::get('/search','SearchController@search_index');
-Route::get('/maps','MapsController@maps_index');
+
