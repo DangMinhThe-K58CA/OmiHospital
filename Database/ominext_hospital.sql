@@ -6,6 +6,8 @@
 -- Generation Time: Jul 25, 2016 at 06:36 AM
 -- Server version: 5.6.26-log
 -- PHP Version: 5.6.15
+CREATE DATABASE  IF NOT EXISTS `ominext_hospital` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ominext_hospital`;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +21,42 @@ SET time_zone = "+00:00";
 --
 -- Database: `ominext_hospital`
 --
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `type`
+--
+
+CREATE TABLE `type` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `type`
+--
+
+INSERT INTO `type` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Thành Phố', NULL, NULL),
+(2, 'Tỉnh', NULL, NULL),
+(3, 'Quận', NULL, NULL),
+(4, 'Huyện', NULL, NULL),
+(5, 'Thị Xã', NULL, NULL),
+(6, 'Phường', NULL, NULL),
+(7, 'Thị Trấn', NULL, NULL),
+(8, 'Xã', NULL, NULL),
+(9, 'Thôn', NULL, NULL),
+(10, 'Làng', NULL, NULL),
+(11, 'Xóm', NULL, NULL),
+(12, 'Ấp', NULL, NULL),
+(13, 'Bản', NULL, NULL),
+(14, 'Buôn', NULL, NULL),
+(15, 'Sóc', NULL, NULL),
+(16, 'Thành Phố', NULL, NULL);
+
+-- --------------------------------------------------------
 
 -- --------------------------------------------------------
 
@@ -895,42 +933,6 @@ CREATE TABLE `service` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `type`
---
-
-CREATE TABLE `type` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `type`
---
-
-INSERT INTO `type` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Thành Phố', NULL, NULL),
-(2, 'Tỉnh', NULL, NULL),
-(3, 'Quận', NULL, NULL),
-(4, 'Huyện', NULL, NULL),
-(5, 'Thị Xã', NULL, NULL),
-(6, 'Phường', NULL, NULL),
-(7, 'Thị Trấn', NULL, NULL),
-(8, 'Xã', NULL, NULL),
-(9, 'Thôn', NULL, NULL),
-(10, 'Làng', NULL, NULL),
-(11, 'Xóm', NULL, NULL),
-(12, 'Ấp', NULL, NULL),
-(13, 'Bản', NULL, NULL),
-(14, 'Buôn', NULL, NULL),
-(15, 'Sóc', NULL, NULL),
-(16, 'Thành Phố', NULL, NULL);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `ward`
@@ -11186,7 +11188,7 @@ ALTER TABLE `clinic_service`
 -- Constraints for table `district`
 --
 ALTER TABLE `district`
-  ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`id`) REFERENCES `type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `province`

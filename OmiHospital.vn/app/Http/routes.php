@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix' => 'locationService'], function () {
+    Route::get('/', 'LocationController@index');
+    Route::get('/s={lat}&e={lng}&z={zoom}', 'LocationController@getNeighbors');
+});
