@@ -24,14 +24,14 @@
 
 @keyframes pulse {
     0% {
-        top:60px;
-        left:60px;
+        top: 60px;
+        left: 60px;
         width: 60px;
         height: 60px;
         background-color: rgba(255, 255, 255, 0.2);
     }
     100% {
-        top:0px;
+        top: 0px;
         left: 0px;
         width: 180px;
         height: 180px;
@@ -63,14 +63,64 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4);
     border: none;
 }
-.btn-add:focus{
+
+.btn-add:focus {
     outline: 0;
 }
-.btn-xl{
-    background-color: transparent;
-    border: 2px solid rgba(255,255,255,0.6);
+
+.anim-text-1, .anim-text-2 {
+    position: absolute;
+
 }
-.btn-xl:hover{
-    background-color: rgba(255,255,255,0.3);
-    border: 2px solid rgba(255,255,255,0.6);
+
+.anim-text-1 {
+    top: 15px;
+    animation: pulse2 2s infinite;
+}
+
+.anim-text-2 {
+    bottom: 15px;
+    animation: pulse3 2s infinite;
+}
+
+@keyframes pulse2 {
+    0% {
+        left: 0px;
+        color: rgba(255, 255, 255, 0.0);
+    }
+    25% {
+        color: rgba(255, 255, 255, 1);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    100% {
+        left: 150px;
+        color: rgba(255, 255, 255, 0.0);
+    }
+}
+
+@keyframes pulse3 {
+    0% {
+        right: 0px;
+        color: rgba(255, 255, 255, 0.0);
+    }
+    20% {
+        color: rgba(255, 255, 255, 1);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    100% {
+        right: 150px;
+        color: rgba(255, 255, 255, 0.0);
+    }
+}
+
+.btn-xl {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-xl:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
 }
