@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route::get('/saveData', 'LocationController@saveData');
+
 
 Route::group(['prefix' => 'locationService'], function () {
     Route::get('/', 'LocationController@index');

@@ -11,7 +11,23 @@ use App\Clinic;
 
 class LocationController extends Controller
 {
-    //
+//    public function saveData(Request $request) {
+//        $jsonData = '';
+//        $clinics = json_decode($jsonData);
+//        for ($i = 0; $i < sizeof($clinics); $i ++) {
+//            $clinic = $clinics[$i];
+//            $new = new Clinic();
+//            $new->name = $clinic->Name;
+//            $new->location = $clinic->Latitude.','.$clinic->Longitude;
+//            $new->phone_number = '1234567890';
+//            $new->address = $clinic->Address;
+//            $new->ward_id = 169;
+//            $new->district_id = 5;
+//            $new->province_id = 1;
+//            $new->short_description = $clinic->Keywords;
+//            $new->save();
+//        }
+//    }
     public function index(Request $request) {
         echo "ok";
     }
