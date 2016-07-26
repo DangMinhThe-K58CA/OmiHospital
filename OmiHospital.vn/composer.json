@@ -23,7 +23,7 @@
             "App\\": "app/"
         },
         "files": [
-            "app/helper/convertLocation.php"
+            "app/helper/calLocation.php"
         ]
     },
     "autoload-dev": {

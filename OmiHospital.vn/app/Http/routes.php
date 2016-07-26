@@ -12,13 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
 });
 
-//Route::get('/saveData', 'LocationController@saveData');
 
-
-Route::group(['prefix' => 'locationService'], function () {
-    Route::get('/', 'LocationController@index');
-    Route::get('/s={lat}&e={lng}&z={zoom}', 'LocationController@getNeighbors');
-});
