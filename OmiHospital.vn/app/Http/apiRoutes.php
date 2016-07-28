@@ -19,6 +19,7 @@ Route::group(['prefix' => 'api/v1','namespace' => 'v1'], function()
         return view('pages.index');
     });
     Route::get('/docs','ApiController@index');
+    Route::get('/lat={lat}&lng={lng}&rad={rad}','ApiController@getNeighboursLocationByRadius');
     Route::get('/lat={lat}&lng={lng}','ApiController@getNeighboursLocation');
     Route::get('/id={id}','ApiController@getLocationInformation');
 });
