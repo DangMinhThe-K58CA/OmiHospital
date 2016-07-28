@@ -6,6 +6,8 @@
 -- Generation Time: Jul 28, 2016 at 04:26 AM
 -- Server version: 5.6.26-log
 -- PHP Version: 5.6.15
+CREATE DATABASE IF NOT EXISTS `ominext_hospital`;
+USE `ominext_hospital`;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
